@@ -52,7 +52,7 @@ pipeline {
         }
         steps {
             // withCredentials([string(credentialsId: 'gittoken', variable: 'gittoken')]) {
-            withCredentials([usernamePassword(credentialsId: 'gittoken', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+            withCredentials([usernamePassword(credentialsId: 'GitUserPass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                 sh '''
                     git config user.email "roshmi.gopa@gmail.com"
                     git config user.name "RoshmiB"
