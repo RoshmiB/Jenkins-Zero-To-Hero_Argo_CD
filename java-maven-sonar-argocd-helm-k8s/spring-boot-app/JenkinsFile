@@ -54,7 +54,7 @@ pipeline {
             // withCredentials([string(credentialsId: 'gittoken', variable: 'gittoken')]) {
             withCredentials([usernamePassword(credentialsId: 'GitUserPass', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                 sh '''
-                    git config user.email "roshmi.gopa@gmail.com"
+                    git config user.email "roshmi.gopa24@gmail.com"
                     git config user.name "RoshmiB"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
